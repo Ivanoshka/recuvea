@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECUVEA - Equipos y Papelería</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to right, #004080, #0066cc);
+            color: white;
+            padding: 60px 20px 40px;
+            text-align: center;
+            animation: slideDown 1s ease-out;
+            position: relative;
+        }
+
+        header img {
+            width: 80px;
+            height: auto;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: white;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        nav {
+            background-color: #003366;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+            animation: fadeIn 2s ease-in;
+        }
+
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #004080;
+        }
+
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-container button {
+            background-color: #0066cc;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-container button:hover {
+            background-color: #004080;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        .servicios {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 280px;
+            text-align: left;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #004080;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="src/logo-recuvea-sin-fondo.png" alt="Logo RECUVEA">
+        <h1>RECUVEA</h1>
+        <p>Proveedor de equipo de oficina, papelería y equipo de cómputo</p>
+    </header>
+
+    <nav>
+        <a href="#bienvenida">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <section id="bienvenida">
+        <h2>Bienvenido a RECUVEA</h2>
+        <p>Somos una empresa dedicada a proveer soluciones integrales para oficinas: desde artículos de papelería y
+            mobiliario, hasta equipos de cómputo de última generación. Nuestro compromiso es ofrecer productos de
+            calidad, precios competitivos y atención personalizada.</p>
+    </section>
+
+    <section id="servicios">
+        <h2>¿Qué ofrecemos?</h2>
+        <div class="servicios">
+            <div class="card">
+                <h3>Equipo de Oficina</h3>
+                <p>Sillas, escritorios, archiveros y todo lo que necesitas para un espacio funcional y cómodo.</p>
+            </div>
+            <div class="card">
+                <h3>Papelería</h3>
+                <p>Cuadernos, hojas, folders, bolígrafos, y más. Todo lo que una oficina organizada requiere.</p>
+            </div>
+            <div class="card">
+                <h3>Equipo de Cómputo</h3>
+                <p>Laptops, PCs, monitores, impresoras y accesorios para optimizar el rendimiento de tu equipo.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contáctanos</h2>
+        <div class="form-container">
+            <form action="https://formsubmit.co/tu_correo@dominio.com" method="POST">
+                <input type="text" name="nombre" placeholder="Tu nombre" required>
+                <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 RECUVEA. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
